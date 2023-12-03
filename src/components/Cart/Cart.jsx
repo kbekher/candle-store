@@ -23,9 +23,9 @@ const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart }) => {
       <Grid container spacing={3}>
         {cart.line_items.map((item) => (
           <Grid item xs={12} sm={4} key={item.id}>
-            <CartItem 
-              item={item} 
-              onUpdateCartQty={onUpdateCartQty} 
+            <CartItem
+              item={item}
+              onUpdateCartQty={onUpdateCartQty}
               onRemoveFromCart={onRemoveFromCart}
             />
           </Grid>
@@ -50,6 +50,8 @@ const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart }) => {
           </Button>
 
           <Button
+            component={Link}
+            to="/checkout"
             className={classes.checkoutButton}
             size='large'
             type='button'
