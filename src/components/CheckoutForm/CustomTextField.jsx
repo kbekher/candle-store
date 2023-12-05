@@ -13,9 +13,10 @@ const FormInput = ({ name, label }) => {
         )}
         control={control}
         name={name}
+        defaultValue=''
       />
     </Grid>
-  )
-}
+  );
+};
 
 export default FormInput
